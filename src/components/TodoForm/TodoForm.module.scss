@@ -1,0 +1,38 @@
+@use '@/styles/helpers' as *;
+
+.form {
+	display: flex;
+	column-gap: to-rem(8);
+	margin-bottom: to-rem(16);
+}
+
+.input {
+	flex-grow: 1;
+	height: to-rem(40);
+	padding-inline: to-rem(12);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	border: var(--border);
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+
+	&::placeholder {
+		color: var(--color-text-dim);
+	}
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: to-rem(40);
+	padding-inline: to-rem(12);
+	font-weight: 500;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	border: var(--border);
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+	cursor: pointer;
+}

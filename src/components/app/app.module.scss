@@ -1,2 +1,7 @@
+@use '@/styles/helpers' as *;
+
 .app {
+	max-width: to-rem(640);
+	margin-inline: auto;
+	padding-inline: to-rem(20);
 }
