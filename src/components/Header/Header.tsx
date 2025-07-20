@@ -5,11 +5,11 @@ const { header, logo, title } = styles
 
 export default function Header() {
 	return (
-		<div className={header}>
+		<header className={header}>
 			<div className={logo}>
 				<LeafIcon />
 			</div>
 			<h1 className={title}>Leafy Todos</h1>
-		</div>
+		</header>
 	)
 }
