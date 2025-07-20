@@ -1,69 +1,26 @@
-# React + TypeScript + Vite
+# 🌿 [Leafy Todos](https://flinski.github.io/leafy-todos/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Leafy Todos** — это простое и минималистичное приложение для управления списком задач. Оно создано как учебный проект для практики с **React** и **TypeScript**, а также с современным фронтенд-стеком и инструментами разработки.
 
-Currently, two official plugins are available:
+## ✨ Функциональность
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* ✅ Добавление новых задач
+* 🗑️ Удаление отдельных задач
+* ✔️ Отметка задач как выполненных
+* ♻️ Удаление всех задач или только выполненных
+* 💾 Сохранение задач в `localStorage`
+* 📊 Статистика выполнения задач (завершено / всего (%))
+* 📱 Адаптивная верстка под мобильные устройства
 
-## Expanding the ESLint configuration
+## 🛠️ Стек технологий
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **React** — библиотека для построения UI
+* **TypeScript** — строгая типизация для повышения надежности кода
+* **Vite** — быстрый сборщик и дев-сервер
+* **SCSS Modules** — модульные стили с поддержкой вложенности
+* **ESLint + Prettier** — линтинг и автоформатирование кода
+* **Husky** — pre-commit хуки для обеспечения качества кода
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎯 Цель проекта
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Этот проект был создан в образовательных целях, чтобы углубить знания в React и TypeScript, а также попрактиковаться в написании чистого и структурированного кода.
