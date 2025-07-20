@@ -21,7 +21,7 @@
 	background-color: var(--color-border);
 	border-radius: to-rem(16);
 
-	span {
+	div {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -29,6 +29,7 @@
 		height: 100%;
 		background-color: var(--color-accent);
 		border-radius: to-rem(16);
+		transition-duration: var(--transition-duration);
 	}
 }
 

@@ -19,7 +19,7 @@ export default function Stats({ todos }: StatsProps) {
 	return (
 		<div className={stats}>
 			<div className={range}>
-				<span></span>
+				<div style={{ width: `${completedPct}%` }}></div>
 			</div>
 			<div className={completed}>
 				{numCompletedTodos} / {numTodos} Completed ({completedPct}%)
