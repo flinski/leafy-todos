@@ -1,18 +1,15 @@
 import { useState } from 'react'
-
 import type { Todo } from '@/types/data'
-
 import CrossIcon from '@/components/icons/CrossIcon'
-
 import styles from './TodoItem.module.scss'
-
-const { item, customCheckbox, hiddenCheckbox, checkbox, title, deleteBtn } = styles
 
 interface TodoItemProps {
 	todo: Todo
 	onDeleteTodo: (id: string) => void
 	onToggleTodo: (id: string) => void
 }
+
+const { item, customCheckbox, hiddenCheckbox, checkbox, title, deleteBtn } = styles
 
 export default function TodoItem({ todo, onDeleteTodo, onToggleTodo }: TodoItemProps) {
 	const [hover, setHover] = useState(false)
@@ -28,7 +25,9 @@ export default function TodoItem({ todo, onDeleteTodo, onToggleTodo }: TodoItemP
 				/>
 				<span className={checkbox}></span>
 			</label>
-			<span className={title}>{todo.title}</span>
+			<span className={title} title={todo.title}>
+				{todo.title}
+			</span>
 			{hover ? (
 				<button className={deleteBtn} onClick={() => onDeleteTodo(todo.id)}>
 					<CrossIcon />

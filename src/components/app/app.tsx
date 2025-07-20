@@ -1,14 +1,12 @@
 import { useLocalStorage } from '@/hooks/useLocalStorage'
-
 import { LS_KEY } from '@/constants'
-
 import type { Todo } from '@/types/data'
-
 import Header from '@/components/Header'
 import TodoForm from '@/components/TodoForm'
 import TodoList from '@/components/TodoList'
 import TodoItem from '@/components/TodoItem'
-
+import Stats from '@/components/Stats'
+import Actions from '@/components/Actions'
 import styles from './App.module.scss'
 
 export default function App() {
@@ -28,20 +26,37 @@ export default function App() {
 		)
 	}
 
+	const handleClearAllTodos = () => {
+		setTodos([])
+	}
+
+	const handleClearCompletedTodos = () => {
+		setTodos((curTodos) => curTodos.filter((todo) => !todo.completed))
+	}
+
 	return (
 		<div className={styles.app}>
 			<Header />
 			<TodoForm onAddTodo={handleAddTodo} />
-			<TodoList>
-				{todos.map((todo) => (
-					<TodoItem
-						key={todo.id}
-						todo={todo}
-						onDeleteTodo={handleDeleteTodo}
-						onToggleTodo={handleToggleTodo}
+			<Stats todos={todos} />
+			{todos.length > 0 ? (
+				<>
+					<TodoList>
+						{todos.map((todo) => (
+							<TodoItem
+								key={todo.id}
+								todo={todo}
+								onDeleteTodo={handleDeleteTodo}
+								onToggleTodo={handleToggleTodo}
+							/>
+						))}
+					</TodoList>
+					<Actions
+						onClearAllTodos={handleClearAllTodos}
+						onClearCompletedTodos={handleClearCompletedTodos}
 					/>
-				))}
-			</TodoList>
+				</>
+			) : null}
 		</div>
 	)
 }

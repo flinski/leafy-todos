@@ -55,6 +55,7 @@
 }
 
 .title {
+	@include text-ellipsis(1);
 	flex-grow: 1;
 	text-transform: none;
 }

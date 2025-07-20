@@ -3,7 +3,7 @@
 .form {
 	display: flex;
 	column-gap: to-rem(8);
-	margin-bottom: to-rem(16);
+	margin-bottom: to-rem(12);
 }
 
 .input {
@@ -35,4 +35,9 @@
 	border-radius: var(--border-radius);
 	box-shadow: var(--shadow);
 	cursor: pointer;
+	transition: transform var(--transition-duration);
+
+	@include hover {
+		transform: translateY(1px);
+	}
 }

@@ -1,0 +1,28 @@
+@use '@/styles/helpers' as *;
+
+.actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: to-rem(40);
+		padding-inline: to-rem(12);
+		font-weight: 500;
+		color: var(--color-text);
+		background-color: var(--color-bg);
+		border: var(--border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--shadow);
+		cursor: pointer;
+		transition: transform var(--transition-duration);
+
+		@include hover {
+			transform: translateY(1px);
+		}
+	}
+}

@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-
 import styles from './TodoList.module.scss'
 
 interface TodoListProps {

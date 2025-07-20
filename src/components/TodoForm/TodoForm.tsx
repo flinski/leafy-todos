@@ -1,20 +1,20 @@
 import { useState } from 'react'
-
 import type { Todo } from '@/types/data'
-
 import styles from './TodoForm.module.scss'
-
-const { form, input, button } = styles
 
 interface TodoFormProps {
 	onAddTodo: (newTodo: Todo) => void
 }
+
+const { form, input, button } = styles
 
 export default function TodoForm({ onAddTodo }: TodoFormProps) {
 	const [title, setTitle] = useState('')
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
+
+		if (!title) return
 
 		const newTodo: Todo = {
 			id: crypto.randomUUID(),
@@ -32,6 +32,7 @@ export default function TodoForm({ onAddTodo }: TodoFormProps) {
 				className={input}
 				type="text"
 				placeholder="Add new task..."
+				size={1}
 				value={title}
 				onChange={(event) => setTitle(event.target.value)}
 			/>

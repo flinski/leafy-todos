@@ -1,0 +1,48 @@
+@use '@/styles/helpers' as *;
+
+.stats {
+	display: flex;
+	align-items: center;
+	column-gap: to-rem(12);
+	height: to-rem(48);
+	padding-inline: to-rem(12);
+	margin-bottom: to-rem(16);
+	background-color: var(--color-bg);
+	border: var(--border);
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+}
+
+.range {
+	position: relative;
+	flex-grow: 1;
+	height: to-rem(8);
+	overflow: hidden;
+	background-color: var(--color-border);
+	border-radius: to-rem(16);
+
+	span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: var(--color-accent);
+		border-radius: to-rem(16);
+	}
+}
+
+.completed {
+	font-size: to-rem(14);
+	font-weight: 500;
+	color: var(--color-text-dim);
+}
+
+.info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: to-rem(48);
+	color: var(--color-text-dim);
+}
