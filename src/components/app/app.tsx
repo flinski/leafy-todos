@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useLocalStorage } from '@/hooks/useLocalStorage'
+
+import { LS_KEY } from '@/constants'
 
 import type { Todo } from '@/types/data'
 
@@ -9,17 +11,8 @@ import TodoItem from '@/components/TodoItem'
 
 import styles from './App.module.scss'
 
-const initialState: Todo[] = [
-	{ id: '1', title: 'Add tasks', completed: true },
-	{ id: '2', title: 'Delete tasks', completed: true },
-	{ id: '3', title: 'Complete tasks', completed: true },
-	{ id: '4', title: 'Save to localStorage', completed: false },
-	{ id: '5', title: 'Clear all / completed', completed: false },
-	{ id: '6', title: 'Completed slider / counter', completed: false },
-]
-
 export default function App() {
-	const [todos, setTodos] = useState<Todo[]>(initialState)
+	const [todos, setTodos] = useLocalStorage<Todo[]>([], LS_KEY)
 
 	const handleAddTodo = (newTodo: Todo) => {
 		setTodos((curTodos) => [...curTodos, newTodo])
