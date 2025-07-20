@@ -1,13 +1,29 @@
 @use '@/styles/helpers' as *;
 
 .header {
+	display: flex;
+	align-items: center;
+	column-gap: to-rem(8);
 	margin-top: to-rem(128);
 	margin-bottom: to-rem(24);
-	font-size: to-rem(32);
-	font-weight: 600;
 
 	@include mobile {
 		margin-top: to-rem(32);
 		margin-bottom: to-rem(16);
 	}
+}
+
+.logo {
+	flex-shrink: 0;
+	color: var(--color-accent);
+
+	svg {
+		width: to-rem(32);
+		height: to-rem(32);
+	}
+}
+
+.title {
+	font-size: to-rem(32);
+	font-weight: 600;
 }

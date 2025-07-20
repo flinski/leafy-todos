@@ -1,5 +1,15 @@
+import LeafIcon from '@/components/icons/LeafIcon'
 import styles from './Header.module.scss'
 
+const { header, logo, title } = styles
+
 export default function Header() {
-	return <h1 className={styles.header}>React To-do List</h1>
+	return (
+		<div className={header}>
+			<div className={logo}>
+				<LeafIcon />
+			</div>
+			<h1 className={title}>Leafy Todos</h1>
+		</div>
+	)
 }
