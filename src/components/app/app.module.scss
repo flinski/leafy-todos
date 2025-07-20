@@ -4,4 +4,9 @@
 	max-width: to-rem(640);
 	margin-inline: auto;
 	padding: to-rem(20);
+	padding-bottom: to-rem(40);
+
+	@include mobile {
+		padding-bottom: to-rem(30);
+	}
 }
