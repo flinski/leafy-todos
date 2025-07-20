@@ -1,8 +1,13 @@
 @use '@/styles/helpers' as *;
 
 .header {
-	margin-top: to-rem(100);
+	margin-top: to-rem(128);
 	margin-bottom: to-rem(24);
 	font-size: to-rem(32);
 	font-weight: 600;
+
+	@include mobile {
+		margin-top: to-rem(32);
+		margin-bottom: to-rem(16);
+	}
 }

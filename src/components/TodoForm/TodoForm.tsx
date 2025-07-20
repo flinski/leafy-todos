@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { generateId } from '@/utils'
 import type { Todo } from '@/types/data'
 import styles from './TodoForm.module.scss'
 
@@ -17,7 +18,7 @@ export default function TodoForm({ onAddTodo }: TodoFormProps) {
 		if (!title) return
 
 		const newTodo: Todo = {
-			id: crypto.randomUUID(),
+			id: generateId(),
 			title: title,
 			completed: false,
 		}

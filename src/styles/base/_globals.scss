@@ -5,10 +5,10 @@
 // 	scrollbar-color: var(--gray-400) var(--gray-50);
 // }
 
-// *::selection {
-// 	color: var(--brand-950);
-// 	background-color: var(--brand-200);
-// }
+*::selection {
+	color: var(--color-text);
+	background-color: var(--color-accent-dim);
+}
 
 html {
 	-webkit-tap-highlight-color: transparent;
