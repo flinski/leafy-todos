@@ -2,7 +2,7 @@
 
 **Leafy Todos** — это простое и минималистичное приложение для управления списком задач. Оно создано как учебный проект для практики с **React** и **TypeScript**, а также с современным фронтенд-стеком и инструментами разработки.
 
-<img width="804" height="567" alt="image" src="https://github.com/user-attachments/assets/8901a455-9398-40f4-9901-a37bf9305077" />
+<img width="1903" height="954" alt="image" src="https://github.com/user-attachments/assets/6af15875-6abb-44ab-b5ab-febda20adbf9" />
 
 ## ✨ Функциональность
 
